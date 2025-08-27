@@ -25,7 +25,7 @@ body{
 .main-container{
     height: auto;
     min-height: 50vh;
-    max-width: 45vw;
+    max-width: 35vw;
     background-color: #fff;
     margin: -16vh auto 20vh;
     border-radius: 10px;
@@ -59,10 +59,6 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: hsl(292, 42%, 14%);
-}
-
-.que p{
     font-size: 14px;
     font-weight: 600;
     color: hsl(292, 42%, 14%);
@@ -80,25 +76,26 @@ body{
 }
 
 .ans{
-    margin-top: 0px;
+    margin-top: 20px;
     font-size: 14px;
     color: hsl(292, 16%, 49%);
-    max-height: 0px;
-    opacity: 0;
+    overflow: hidden;
+    max-height: 150px;
+    opacity: 1;
     transition: max-height 0.4s ease,
                 opacity 0.4s ease,
                 margin 0.4s ease;
 }
 
-.show{
-    opacity: 1;
-    overflow: hidden;
-    margin-top: 20px;;
+.hidden{
+    opacity: 0;
+    max-height: 0;
+    margin-top: 0;
 }
 
 @media screen and (max-width: 900px){
     .main-container{
-        max-width: 60vw;
+        max-width: 45vw;
     }
 
     .faq-heading img{
@@ -114,7 +111,7 @@ body{
 
 @media screen and (max-width: 600px){
     .main-container{
-        max-width: 65vw;
+        max-width: 55vw;
     }
 
     .faq-heading img{
@@ -130,7 +127,7 @@ body{
 
 @media screen and (max-width: 400px){
     .main-container{
-        max-width: 70vw;
+        max-width: 65vw;
     }
 
     .faq-heading img{

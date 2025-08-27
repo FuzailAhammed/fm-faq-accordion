@@ -40,7 +40,7 @@
             <p>What is Frontend Mentor, and how will it help me?</p>
             <img src="assets/images/icon-plus.svg" alt="" class="icon"/>
           </div>
-          <p class="ans">
+          <p class="ans hidden">
             Frontend Mentor offers realistic coding challenges to help
             developers improve coding skills with projects in HTML, CSS, and
             JavaScript. It's suitable for all levels and ideal for portfolio
@@ -53,7 +53,7 @@
             <p>Is Frontend Mentor free?</p>
             <img src="assets/images/icon-plus.svg" alt="" class="icon"/>
           </div>
-          <p class="ans">
+          <p class="ans hidden">
             Yes absolutely, you can use it for lifetime, take it granted.
           </p>
         </div>
@@ -63,7 +63,7 @@
             <p>Can I use Frontend Mentor projects in my portfolio?</p>
             <img src="assets/images/icon-plus.svg" alt="" class="icon"/>
           </div>
-          <p class="ans">
+          <p class="ans hidden">
             Ofcourse, showcase your skills to others and get rewards.
           </p>
         </div>
@@ -73,7 +73,7 @@
             <p>How can i get if I'm stuck on a challenge?</p>
             <img src="assets/images/icon-plus.svg" alt="" class="icon"/>
           </div>
-          <p class="ans">
+          <p class="ans hidden">
             You can use our discord community help, it is very supportive.
           </p>
         </div>
@@ -90,14 +90,12 @@
           ans = que.nextElementSibling;
           icon = que.querySelector('.icon');
 
-          if(ans.classList.contains('show')){
-            ans.style.maxHeight =  0;
-            ans.classList.remove('show');
-            icon.src = "assets/images/icon-plus.svg";
+          if(ans.classList.contains('hidden')){
+            ans.classList.remove('hidden');
+            icon.src = "assets/images/icon-minus.svg";
           }else{
-            ans.style.maxHeight =  ans.scrollHeight + 'px';
-            ans.classList.add('show')
-            icon.src = "assets/images/icon-minus.svg"
+            ans.classList.add('hidden')
+            icon.src = "assets/images/icon-plus.svg"
           }
         })
       })
