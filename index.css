@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+
+}
+
+body{
+    position: relative;
+    padding-top: 0.1px;
+    background-color: beige;
+}
+
+.bg-container{
+    height: 35vh;
+    width: 100%;
+    background-image: url("./assets/images/background-pattern-desktop.svg");
+    background-size: cover;
+    background-position: center;
+}
+
+.main-container{
+    height: auto;
+    min-height: 50vh;
+    max-width: 45vw;
+    background-color: #fff;
+    margin: -16vh auto 20vh;
+    border-radius: 10px;
+    padding: 35px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.faq-heading{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.faq-heading img{
+    width: 35px;
+    height: 35px;
+}
+
+.faq-heading h1{
+    margin-left: 20px;
+    font-size: 38px;
+}
+
+.faq{
+    word-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+.que{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: hsl(292, 42%, 14%);
+}
+
+.que p{
+    font-size: 14px;
+    font-weight: 600;
+    color: hsl(292, 42%, 14%);
+    cursor: pointer;
+
+    &:hover{
+        color: hsl(293, 88%, 33%);
+    }
+}
+
+.que img{
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+}
+
+.ans{
+    margin-top: 0px;
+    font-size: 14px;
+    color: hsl(292, 16%, 49%);
+    max-height: 0px;
+    opacity: 0;
+    transition: max-height 0.4s ease,
+                opacity 0.4s ease,
+                margin 0.4s ease;
+}
+
+.show{
+    opacity: 1;
+    overflow: hidden;
+    margin-top: 20px;;
+}
+
+@media screen and (max-width: 900px){
+    .main-container{
+        max-width: 60vw;
+    }
+
+    .faq-heading img{
+        width: 25px;
+        height: 25px;
+    }
+
+    .faq-heading h1{
+        margin-left: 15px;
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .main-container{
+        max-width: 65vw;
+    }
+
+    .faq-heading img{
+        width: 22px;
+        height: 22px;
+    }
+
+    .faq-heading h1{
+        margin-left: 12px;
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .main-container{
+        max-width: 70vw;
+    }
+
+    .faq-heading img{
+        width: 18px;
+        height: 18px;
+    }
+
+    .faq-heading h1{
+        margin-left: 10px;
+        font-size: 20px;
+    }
+}
